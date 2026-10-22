@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة أيام الشنغن - Schengen Days Tracker</title>
+<link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); min-height: 100vh; padding: 12px; color: #333; display: flex; flex-direction: column; align-items: center; }
+  .container { max-width: 900px; width: 100%; background: #fff; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); overflow: hidden; }
+  header { background: linear-gradient(135deg, #003399, #ffcc00); color: #fff; padding: 18px; text-align: center; text-shadow: 0 1px 2px rgba(0,0,0,0.4); }
+  header h1 { font-size: 1.25rem; margin-bottom: 4px; }
+  header p { font-size: 0.82rem; opacity: 0.95; }
+  .content { padding: 16px; }
+  .driver-fixed { background: linear-gradient(135deg, #fff9e6, #fff3cd); border: 2px solid #ffcc00; border-radius: 12px; padding: 12px 14px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(255,204,0,0.25); }
+  .driver-fixed label { font-size: 0.9rem; font-weight: 700; color: #856404; white-space: nowrap; }
+  .driver-fixed input { flex: 1; min-width: 0; padding: 9px 12px; border: 2px solid #e0c970; border-radius: 8px; font-size: 0.95rem; font-weight: 600; background: #fff; color: #333; font-family: inherit; }
+  .driver-fixed input:focus { outline: none; border-color: #ffcc00; box-shadow: 0 0 0 3px rgba(255,204,0,0.25); }
+  .trip-form { background: #f4f6f9; border-radius: 12px; padding: 14px; margin-bottom: 16px; border: 1px solid #e0e6ef; }
+  .trip-form h2 { font-size: 1rem; color: #003399; margin-bottom: 10px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .form-group label { display: block; font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; color: #2a5298; }
+  input[type="date"], input[type="text"] { width: 100%; padding: 9px; border: 2px solid #d0d7e2; border-radius: 8px; font-size: 0.92rem; background: #fff; font-family: inherit; }
+  input[type="date"]:focus, input[type="text"]:focus { outline: none; border-color: #003399; }
+  .btn { padding: 11px; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: transform 0.1s, opacity 0.2s; }
+  .btn:active { transform: scale(0.98); }
+  .btn-add { background: #003399; color: #fff; width: 100%; margin-top: 10px; }
+  .btn-clear { background: #ce1126; color: #fff; width: 100%; margin-top: 12px; }
+  .error { color: #ce1126; font-size: 0.83rem; margin-top: 6px; text-align: center; min-height: 18px; font-weight: 600; }
+  .limit-selector { display: flex; gap: 10px; align-items: center; justify-content: center; background: #fff; border: 2px solid #003399; border-radius: 12px; padding: 12px; margin-bottom: 16px; }
+  .limit-selector .limit-label { font-size: 0.9rem; font-weight: 700; color: #003399; margin-left: 6px; }
+  .limit-option { flex: 1; padding: 10px; border: 2px solid #d0d7e2; background: #f4f6f9; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 800; color: #666; transition: all 0.2s; text-align: center; }
+  .limit-option.active { background: linear-gradient(135deg, #003399, #2a5298); color: #fff; border-color: #003399; }
+  .table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; border: 1px solid #d0d7e2; margin-bottom: 16px; }
+  table { width: 100%; border-collapse: collapse; min-width: 600px; font-size: 0.85rem; }
+  thead { background: linear-gradient(135deg, #003399, #2a5298); color: #fff; }
+  th { padding: 10px 8px; text-align: center; font-size: 0.8rem; font-weight: 700; border-left: 1px solid rgba(255,255,255,0.15); }
+  th:last-child { border-left: none; }
+  td { padding: 9px 8px; text-align: center; border-bottom: 1px solid #e8eef5; border-left: 1px solid #f0f3f8; vertical-align: middle; }
+  td:last-child { border-left: none; }
+  tbody tr:nth-child(even) { background: #f8fafd; }
+  .days-cell { font-weight: 800; color: #003399; font-size: 0.95rem; }
+  .notes-cell { text-align: right; font-size: 0.8rem; color: #444; max-width: 220px; word-wrap: break-word; }
+  .notes-cell .truck { display: inline-block; background: #e8f0ff; color: #003399; padding: 2px 6px; border-radius: 4px; font-size: 0.72rem; font-weight: 700; margin-top: 3px; }
+  .btn-delete { background: none; border: none; color: #ce1126; font-size: 1.1rem; cursor: pointer; padding: 4px 6px; border-radius: 4px; }
+  .empty-row td { text-align: center; color: #888; padding: 18px; font-style: italic; }
+  .summary { background: linear-gradient(135deg, #f4f6f9, #e8eef5); border-radius: 12px; padding: 14px; border: 2px solid #003399; }
+  .summary-row { display: flex; justify-content: space-between; padding: 8px 0; font-size: 0.95rem; border-bottom: 1px dashed #c5cedb; }
+  .summary-row:last-of-type { border-bottom: none; }
+  .summary-row .label { color: #444; font-weight: 600; }
+  .summary-row .value { font-weight: 800; font-size: 1.05rem; }
+  .total-days { color: #ce1126; }
+  .remaining-days { color: #006233; }
+  .remaining-days.warning { color: #d97706; }
+  .remaining-days.danger { color: #ce1126; }
+  .progress-bar { height: 10px; background: #d0d7e2; border-radius: 5px; margin-top: 10px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #006233, #003399); border-radius: 5px; transition: width 0.5s, background 0.3s; }
+  .note-info { font-size: 0.75rem; color: #666; margin-top: 6px; text-align: center; font-style: italic; }
+  .action-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+  .btn-print { background: linear-gradient(135deg, #006233, #2a5298); color: #fff; }
+  .btn-print:disabled { opacity: 0.6; cursor: wait; }
+  .footer { text-align: center; padding: 14px 10px 18px; font-size: 0.85rem; color: #666; border-top: 1px solid #e0e6ef; margin-top: 4px; background: #fafbfd; }
+  .footer .sub { font-size: 0.4rem; color: #666; text-align: left; }
+  .footer .heart { color: #ce1126; }
+  @media (max-width: 480px) { .form-grid { grid-template-columns: 1fr; } header h1 { font-size: 1.1rem; } .driver-fixed { flex-wrap: wrap; } .driver-fixed input { width: 100%; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🇪🇺 حاسبة أيام شنغن</h1>
+    <p>احسب أيامك داخل دول شنغن</p>
+  </header>
+
+  <div class="content">
+    <div class="driver-fixed">
+      <label for="driverName">👤 اسم السائق:</label>
+      <input type="text" id="driverName" placeholder="اكتب اسم السائق">
+    </div>
+
+    <div class="limit-selector">
+      <span class="limit-label">الحد الأقصى:</span>
+      <button type="button" class="limit-option active" data-limit="90">90 يوماً</button>
+      <button type="button" class="limit-option" data-limit="45">45 يوماً</button>
+    </div>
+
+    <div class="trip-form">
+      <h2>➕ إضافة رحلة جديدة</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="entryDate">تاريخ الدخول إلى أوروبا</label>
+          <input type="date" id="entryDate">
+        </div>
+        <div class="form-group">
+          <label for="exitDate">تاريخ الخروج من أوروبا</label>
+          <input type="date" id="exitDate">
+        </div>
+        <div class="form-group">
+          <label for="truck">رقم / اسم الشاحنة أو السيارة</label>
+          <input type="text" id="truck">
+        </div>
+        <div class="form-group">
+          <label for="notes">ملاحظات إضافية</label>
+          <input type="text" id="notes">
+        </div>
+      </div>
+      <button class="btn btn-add" id="addTrip">➕ إضافة الرحلة إلى الجدول</button>
+      <div class="error" id="errorMsg"></div>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>الدخول إلى أوروبا</th>
+            <th>الخروج من أوروبا</th>
+            <th>عدد الأيام</th>
+            <th>الشاحنة / ملاحظات</th>
+            <th>حذف</th>
+          </tr>
+        </thead>
+        <tbody id="tripsBody">
+          <tr class="empty-row"><td colspan="6">لا توجد رحلات مسجلة بعد.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="summary">
+      <div class="summary-row">
+        <span class="label">مجموع الأيام المستهلكة:</span>
+        <span class="value total-days" id="totalDays">0 يوم</span>
+      </div>
+      <div class="summary-row">
+        <span class="label">الأيام المتبقية من <span id="limitLabel">90</span>:</span>
+        <span class="value remaining-days" id="remainingDays">90 يوم</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="note-info"></div>
+      <div class="action-buttons">
+        <button class="btn btn-print" id="printBtn">⬇️ تحميل PDF</button>
+        <button class="btn btn-clear" id="clearAll" style="margin-top:0;">🗑️ مسح الرحلات</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="sub"><span class="heart"></span> Développé par Hamza Karrouk</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const STORAGE_KEY = 'schengen_trips_v5';
+  const LIMIT_KEY = 'schengen_limit_v1';
+  const DRIVER_KEY = 'schengen_driver_v1';
+  let trips = [];
+  let maxDays = 90;
+
+  const entryInput = document.getElementById('entryDate');
+  const exitInput = document.getElementById('exitDate');
+  const truckInput = document.getElementById('truck');
+  const notesInput = document.getElementById('notes');
+  const driverNameInput = document.getElementById('driverName');
+  const addBtn = document.getElementById('addTrip');
+  const clearBtn = document.getElementById('clearAll');
+  const printBtn = document.getElementById('printBtn');
+  const tripsBody = document.getElementById('tripsBody');
+  const totalDaysEl = document.getElementById('totalDays');
+  const remainingDaysEl = document.getElementById('remainingDays');
+  const limitLabel = document.getElementById('limitLabel');
+  const progressFill = document.getElementById('progressFill');
+  const errorMsg = document.getElementById('errorMsg');
+  const limitBtns = document.querySelectorAll('.limit-option');
+
+  function loadData() {
+    try {
+      const data = localStorage.getItem(STORAGE_KEY);
+      if (data) trips = JSON.parse(data) || [];
+    } catch (e) { trips = []; }
+    try {
+      const savedLimit = localStorage.getItem(LIMIT_KEY);
+      if (savedLimit === '45' || savedLimit === '90') maxDays = parseInt(savedLimit, 10);
+    } catch (e) {}
+    try {
+      const savedDriver = localStorage.getItem(DRIVER_KEY);
+      if (savedDriver) driverNameInput.value = savedDriver;
+    } catch (e) {}
+  }
+
+  function saveTrips() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(trips)); } catch (e) {} }
+  function saveLimit() { try { localStorage.setItem(LIMIT_KEY, String(maxDays)); } catch (e) {} }
+  function saveDriver() { try { localStorage.setItem(DRIVER_KEY, driverNameInput.value.trim()); } catch (e) {} }
+
+  function calcDays(entry, exit) {
+    const d1 = new Date(entry + 'T00:00:00');
+    const d2 = new Date(exit + 'T00:00:00');
+    return Math.round((d2 - d1) / (1000 * 60 * 60 * 24)) + 1;
+  }
+
+  function formatDate(dateStr) {
+    const d = new Date(dateStr + 'T00:00:00');
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    return `${day}/${month}/${d.getFullYear()}`;
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function renderTrips() {
+    if (trips.length === 0) {
+      tripsBody.innerHTML = '<tr class="empty-row"><td colspan="6">لا توجد رحلات مسجلة بعد.</td></tr>';
+      return;
+    }
+    tripsBody.innerHTML = '';
+    trips.forEach((trip, index) => {
+      const days = calcDays(trip.entry, trip.exit);
+      let notesHtml = '';
+      if (trip.truck) notesHtml += `<span class="truck">🚛 ${escapeHtml(trip.truck)}</span> `;
+      if (trip.notes) notesHtml += `<div style="margin-top:4px;color:#555;">${escapeHtml(trip.notes)}</div>`;
+      if (!notesHtml) notesHtml = '<span style="color:#aaa;">—</span>';
+
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${formatDate(trip.entry)}</td>
+        <td>${formatDate(trip.exit)}</td>
+        <td class="days-cell">${days} يوم</td>
+        <td class="notes-cell">${notesHtml}</td>
+        <td><button class="btn-delete" data-index="${index}">✕</button></td>
+      `;
+      tripsBody.appendChild(tr);
+    });
+
+    tripsBody.querySelectorAll('.btn-delete').forEach(btn => {
+      btn.addEventListener('click', e => {
+        const idx = parseInt(e.target.dataset.index, 10);
+        if (confirm('هل تريد حذف هذه الرحلة؟')) {
+          trips.splice(idx, 1);
+          saveTrips();
+          renderTrips();
+          updateSummary();
+        }
+      });
+    });
+  }
+
+  function calcTotal() {
+    return trips.reduce((s, t) => {
+      const d = calcDays(t.entry, t.exit);
+      return s + (d > 0 ? d : 0);
+    }, 0);
+  }
+
+  function updateSummary() {
+    const total = calcTotal();
+    const remaining = Math.max(0, maxDays - total);
+    const usedPercent = Math.min(100, (total / maxDays) * 100);
+
+    totalDaysEl.textContent = total + ' يوم';
+    remainingDaysEl.textContent = remaining + ' يوم';
+    limitLabel.textContent = maxDays;
+
+    remainingDaysEl.classList.remove('warning', 'danger');
+    if (remaining <= 0) remainingDaysEl.classList.add('danger');
+    else if (remaining <= Math.round(maxDays * 0.17)) remainingDaysEl.classList.add('warning');
+
+    progressFill.style.width = usedPercent + '%';
+    if (usedPercent >= 100) progressFill.style.background = '#ce1126';
+    else if (usedPercent >= 75) progressFill.style.background = '#d97706';
+    else progressFill.style.background = 'linear-gradient(90deg, #006233, #003399)';
+  }
+
+  function setLimit(newLimit) {
+    maxDays = newLimit;
+    saveLimit();
+    limitBtns.forEach(btn => btn.classList.toggle('active', parseInt(btn.dataset.limit, 10) === newLimit));
+    updateSummary();
+  }
+  limitBtns.forEach(btn => btn.addEventListener('click', () => setLimit(parseInt(btn.dataset.limit, 10))));
+
+  function addTrip() {
+    errorMsg.textContent = '';
+    const entry = entryInput.value;
+    const exit = exitInput.value;
+    const truck = truckInput.value.trim();
+    const notes = notesInput.value.trim();
+
+    if (!entry || !exit) { errorMsg.textContent = '⚠️ يرجى إدخال تاريخي الدخول والخروج.'; return; }
+    if (new Date(exit) < new Date(entry)) { errorMsg.textContent = '⚠️ تاريخ الخروج يجب أن يكون في نفس يوم الدخول أو بعده.'; return; }
+    if (calcDays(entry, exit) <= 0) { errorMsg.textContent = '⚠️ مدة الرحلة غير صالحة.'; return; }
+
+    trips.push({ entry, exit, truck, notes });
+    saveTrips();
+    renderTrips();
+    updateSummary();
+
+    entryInput.value = '';
+    exitInput.value = '';
+    truckInput.value = '';
+    notesInput.value = '';
+    entryInput.focus();
+  }
+
+  function clearAll() {
+    if (trips.length === 0) return;
+    if (confirm('هل أنت متأكد من مسح جميع الرحلات؟')) {
+      trips = [];
+      saveTrips();
+      renderTrips();
+      updateSummary();
+    }
+  }
+
+  // ✅ الحل النهائي: تحميل PDF برمجياً باستخدام jsPDF (بدون تصوير HTML)
+  async function downloadPdf() {
+    if (trips.length === 0) {
+      alert('⚠️ لا توجد رحلات مسجلة. أضف رحلة واحدة على الأقل قبل التحميل.');
+      return;
+    }
+
+    printBtn.disabled = true;
+    const originalText = printBtn.textContent;
+    printBtn.textContent = '⏳ جاري التحميل...';
+
+    try {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+
+      const pageWidth = 210;
+      const pageHeight = 297;
+      const margin = 15;
+      let y = margin;
+
+      // ---- رأس التقرير ----
+      doc.setFillColor(0, 51, 153);
+      doc.rect(0, 0, pageWidth, 22, 'F');
+      doc.setTextColor(255, 255, 255);
+      doc.setFontSize(16);
+      doc.text('Rapport sur espace Schengen', pageWidth / 2, 10, { align: 'center' });
+      doc.setFontSize(10);
+      const now = new Date();
+      const dateStr = `${String(now.getDate()).padStart(2,'0')}/${String(now.getMonth()+1).padStart(2,'0')}/${now.getFullYear()} - ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+      doc.text(dateStr, pageWidth / 2, 17, { align: 'center' });
+
+      y = 30;
+
+      // ---- معلومات السائق والحد ----
+      doc.setTextColor(0, 0, 0);
+      doc.setFontSize(11);
+      doc.setFont(undefined, 'bold');
+      doc.text('Driver Name:', margin, y);
+      doc.setFont(undefined, 'normal');
+      const driverName = driverNameInput.value.trim() || 'Not specified';
+      doc.text(driverName, margin + 35, y);
+
+      doc.setFont(undefined, 'bold');
+      doc.text('Le maximum:', margin + 100, y);
+      doc.setFont(undefined, 'normal');
+      doc.text(maxDays + ' days', margin + 130, y);
+      y += 8;
+
+      // ---- خط فاصل ----
+      doc.setDrawColor(0, 51, 153);
+      doc.setLineWidth(0.5);
+      doc.line(margin, y, pageWidth - margin, y);
+      y += 6;
+
+      // ---- الجدول ----
+      const colWidths = [10, 30, 30, 22, 78];
+      const colX = [];
+      let curX = margin;
+      colWidths.forEach(w => { colX.push(curX); curX += w; });
+
+      const rowHeight = 8;
+
+      // رأس الجدول
+      doc.setFillColor(0, 51, 153);
+      doc.rect(margin, y, pageWidth - 2 * margin, rowHeight, 'F');
+      doc.setTextColor(255, 255, 255);
+      doc.setFontSize(9);
+      doc.setFont(undefined, 'bold');
+      const headers = ['#', 'Date sortie', 'Date entrée', 'jours', 'Truck / Notes'];
+      headers.forEach((h, i) => {
+        doc.text(h, colX[i] + colWidths[i] / 2, y + 5.5, { align: 'center' });
+      });
+      y += rowHeight;
+
+      // صفوف البيانات
+      doc.setTextColor(0, 0, 0);
+      doc.setFont(undefined, 'normal');
+      doc.setFontSize(8.5);
+
+      trips.forEach((trip, index) => {
+        if (y + rowHeight > pageHeight - 40) {
+          doc.addPage();
+          y = margin;
+        }
+        const days = calcDays(trip.entry, trip.exit);
+        if (index % 2 === 0) {
+          doc.setFillColor(240, 244, 250);
+          doc.rect(margin, y, pageWidth - 2 * margin, rowHeight, 'F');
+        }
+        doc.setDrawColor(150, 150, 150);
+        doc.setLineWidth(0.2);
+        doc.rect(margin, y, pageWidth - 2 * margin, rowHeight);
+
+        // خطوط عمودية
+        colX.forEach((x, i) => {
+          if (i > 0) doc.line(x, y, x, y + rowHeight);
+        });
+
+        doc.text(String(index + 1), colX[0] + colWidths[0] / 2, y + 5.5, { align: 'center' });
+        doc.text(formatDate(trip.entry), colX[1] + colWidths[1] / 2, y + 5.5, { align: 'center' });
+        doc.text(formatDate(trip.exit), colX[2] + colWidths[2] / 2, y + 5.5, { align: 'center' });
+        doc.setFont(undefined, 'bold');
+        doc.text(String(days), colX[3] + colWidths[3] / 2, y + 5.5, { align: 'center' });
+        doc.setFont(undefined, 'normal');
+
+        // الشاحنة والملاحظات
+        let truckNotes = '';
+        if (trip.truck) truckNotes += 'Truck: ' + trip.truck;
+        if (trip.notes) truckNotes += (truckNotes ? ' | ' : '') + trip.notes;
+        if (!truckNotes) truckNotes = '-';
+        const splitText = doc.splitTextToSize(truckNotes, colWidths[4] - 4);
+        doc.text(splitText[0] || '-', colX[4] + 2, y + 5.5);
+
+        y += rowHeight;
+      });
+
+      // ---- الملخص ----
+      y += 10;
+      if (y > pageHeight - 50) {
+        doc.addPage();
+        y = margin;
+      }
+
+      const total = calcTotal();
+      const remaining = Math.max(0, maxDays - total);
+
+      doc.setFillColor(244, 246, 249);
+      doc.setDrawColor(0, 51, 153);
+      doc.setLineWidth(0.8);
+      doc.rect(margin, y, pageWidth - 2 * margin, 24, 'FD');
+
+      doc.setTextColor(0, 0, 0);
+      doc.setFontSize(11);
+      doc.setFont(undefined, 'bold');
+      doc.text('Total de jours utilisés:', margin + 5, y + 8);
+      doc.setTextColor(206, 17, 38);
+      doc.text(total + ' days', margin + 55, y + 8);
+
+      doc.setTextColor(0, 0, 0);
+      doc.text('jours restants:', margin + 5, y + 18);
+      doc.setTextColor(0, 98, 51);
+      doc.text(remaining + ' days (out of ' + maxDays + ')', margin + 55, y + 18);
+
+      // ---- التذييل ----
+      doc.setTextColor(100, 100, 100);
+      doc.setFontSize(5);
+      doc.setFont(undefined, 'normal');
+      doc.text('Developpe par Hamza Karrouk', 20 / 2, pageHeight - 15, { align: 'left' });
+
+      // ---- حفظ الملف ----
+      const filename = `Schengen_${(driverNameInput.value.trim() || 'Report').replace(/[^a-zA-Z0-9]/g, '_')}_${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}.pdf`;
+      doc.save(filename);
+
+      printBtn.disabled = false;
+      printBtn.textContent = originalText;
+
+    } catch (err) {
+      console.error('خطأ PDF:', err);
+      alert('⚠️ حدث خطأ: ' + err.message);
+      printBtn.disabled = false;
+      printBtn.textContent = originalText;
+    }
+  }
+
+  addBtn.addEventListener('click', addTrip);
+  clearBtn.addEventListener('click', clearAll);
+  printBtn.addEventListener('click', downloadPdf);
+  driverNameInput.addEventListener('input', saveDriver);
+  driverNameInput.addEventListener('blur', saveDriver);
+
+  [entryInput, exitInput, truckInput].forEach(input => {
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') addTrip(); });
+  });
+
+  loadData();
+  setLimit(maxDays);
+  renderTrips();
+  updateSummary();
+})();
+</script>
+</body>
+</html>
