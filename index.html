@@ -482,7 +482,7 @@
       doc.setTextColor(100, 100, 100);
       doc.setFontSize(5);
       doc.setFont(undefined, 'normal');
-      doc.text('Developpe par Hamza Karrouk RT', 20 / 2, pageHeight - 15, { align: 'left' });
+      doc.text('Developpe par Hamza Karrouk', 20 / 2, pageHeight - 15, { align: 'left' });
 
       // ---- حفظ الملف ----
       const filename = `Schengen_${(driverNameInput.value.trim() || 'Report').replace(/[^a-zA-Z0-9]/g, '_')}_${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}.pdf`;
